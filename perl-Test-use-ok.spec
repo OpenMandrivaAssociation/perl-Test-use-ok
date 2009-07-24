@@ -1,25 +1,24 @@
-%define module	Test-use-ok
-%define name	perl-%{module}
-%define version 0.02
-%define	release	%mkrel 3
+%define upstream_name	 Test-use-ok
+%define upstream_version 0.02
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
+
 Summary:	A visitor for Perl data structures
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is a simple visitor implementation for Perl values.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -37,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
+%doc %{_mandir}/*/*
 %{perl_vendorlib}/Test/*
 %{perl_vendorlib}/ok.pm
-%doc %{_mandir}/*/*
 
