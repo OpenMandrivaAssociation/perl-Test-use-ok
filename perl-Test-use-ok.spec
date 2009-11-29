@@ -14,6 +14,8 @@ Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
+Provides:   perl(ok)
+
 %description
 This module is a simple visitor implementation for Perl values.
 
@@ -39,4 +41,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_mandir}/*/*
 %{perl_vendorlib}/Test/*
 %{perl_vendorlib}/ok.pm
-
