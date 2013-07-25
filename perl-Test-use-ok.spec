@@ -1,15 +1,15 @@
 %define upstream_name	 Test-use-ok
-%define upstream_version 0.02
+%define upstream_version 0.11
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.11
+Release:	1
 
 Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Test/Test-use-ok-0.11.tar.gz
 
 BuildRequires:	perl-devel
 BuildArch:	noarch
@@ -63,4 +63,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Wed Mar 15 2006 Rafael Garcia-Suarez <rgarciasuarez@mandriva.com> 0.01-1mdk
 - Initial MDV release
+
 
