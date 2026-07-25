@@ -2,13 +2,13 @@
 %define upstream_version 0.11
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.11
-Release:	3
+Version:	%{upstream_version}
+Release:	4
 
 Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
+Url:		https://metacpan.org/dist/Test-use-ok
 Source0:	http://www.cpan.org/modules/by-module/Test/Test-use-ok-0.11.tar.gz
 
 BuildRequires:	make
