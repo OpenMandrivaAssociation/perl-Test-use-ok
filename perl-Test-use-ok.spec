@@ -1,9 +1,7 @@
 %define upstream_name	 Test-use-ok
-%define upstream_version 0.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	4
+Version:	0.11
+Release:	5
 
 Summary:	A visitor for Perl data structures
 License:	GPL+ or Artistic
@@ -21,7 +19,7 @@ Provides:	perl(ok)
 This module is a simple visitor implementation for Perl values.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -46,8 +44,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 * Fri Jul 24 2009 Jérôme Quelin <jquelin@mandriva.org> 0.20.0-1mdv2010.0
 + Revision: 399257
 - rebuild
-- using %%perl_convert_version
-- fixed license & source0 fields
+- using %0.11 fixed license & source0 fields
 
 * Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.02-3mdv2009.0
 + Revision: 241985
